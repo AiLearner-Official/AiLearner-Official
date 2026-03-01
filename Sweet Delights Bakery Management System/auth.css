@@ -1,0 +1,84 @@
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#3b1f15,#6f3b2a);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.auth-box{
+    width:380px;
+    margin:50px auto;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    color:#fff;
+}
+
+.top-buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:25px;
+}
+
+.top-buttons button{
+    flex:1;
+    margin:0 5px;
+    padding:10px;
+    border:none;
+    border-radius:20px;
+    background:#c96b3f;
+    color:white;
+    cursor:pointer;
+}
+
+.top-buttons button:hover{
+    background:#a85632;
+}
+
+form{
+    display:none;
+}
+
+form.active{
+    display:block;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:25px;
+    border:none;
+    outline:none;
+}
+
+.submit-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:#e07a5f;
+    color:white;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#b85c43;
+}
+
+.message{
+    text-align:center;
+    margin-bottom:10px;
+    color:#ffd6c9;
+}

@@ -1,0 +1,71 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#fff1e6,#f6d1b3);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* OUTER WRAP */
+.review-wrapper{
+  width:100%;
+  max-width:420px;
+  padding:20px;
+}
+
+/* FORM CARD */
+.review-form{
+  background:#fff;
+  padding:35px 30px;
+  border-radius:22px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.18);
+}
+
+/* INPUTS */
+.review-form input,
+.review-form textarea,
+.review-form select{
+  width:100%;
+  padding:13px 15px;
+  margin-bottom:15px;
+  border-radius:12px;
+  border:1px solid #e0c4b4;
+  outline:none;
+  background:#fff8f3;
+  font-size:14px;
+}
+
+.review-form textarea{
+  height:100px;
+  resize:none;
+}
+
+/* FILE INPUT */
+.review-form input[type="file"]{
+  background:#fff;
+}
+
+/* BUTTON */
+.review-form button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#c96f4a,#8b3a2b);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+.review-form button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(139,58,43,0.4);
+}
