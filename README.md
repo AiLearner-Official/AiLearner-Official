@@ -4,7 +4,7 @@
   <!-- HEADER -->
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ffff,100:0088ff&height=200&section=header&text=AI%20Learner&fontSize=60&fontColor=ffffff&animation=fadeIn" alt="Header" />
   
-  <h1>🤖 AI Learner</h1>
+  <h1>🤖 AI Learner Tech</h1>
   <h3>Empowering the Next Generation of AI Learners</h3>
   
   <p>
@@ -267,7 +267,7 @@ root@AI-Learner:~# <span style="animation: blink 1s infinite;">█</span>
   </a>
 
   <div style="margin-top: 30px;">
-    <p>© 2025 AI Learner | All Rights Reserved</p>
+    <p>© 2025 AI Learner Tech | All Rights Reserved</p>
     <p>
       <a href="https://ailearner.tech/privacy" style="color: #00ffff;">Privacy Policy</a> •
       <a href="https://ailearner.tech/terms" style="color: #00ffff;">Terms of Service</a> •
