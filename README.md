@@ -1,4 +1,4 @@
-<!-- AI Learner - Professional GitHub Profile -->
+<!-- AI Learner Tech - Professional GitHub Profile -->
 <div align="center">
 
   <!-- HEADER -->
