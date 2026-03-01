@@ -1,0 +1,94 @@
+<?php
+// Simple form handler for non-JavaScript submissions
+session_start();
+
+// Database connection for XAMPP
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'skiller_db';
+
+// Create connection
+$conn = new mysqli($host, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Process form submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get form data
+    $name = isset($_POST['name']) ? trim($_POST['name']) : '';
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+    $interest = isset($_POST['interest']) ? trim($_POST['interest']) : '';
+    
+    // Basic validation
+    $errors = [];
+    
+    if (empty($name)) {
+        $errors[] = 'Name is required';
+    }
+    
+    if (empty($email)) {
+        $errors[] = 'Email is required';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Invalid email format';
+    }
+    
+    if (empty($interest)) {
+        $errors[] = 'Please select an interest';
+    }
+    
+    // If no errors, save to database
+    if (empty($errors)) {
+        $ip_address = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
+        $user_agent = $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown';
+        
+        // Check if email already exists
+        $check_sql = "SELECT id FROM subscribers WHERE email = ?";
+        $check_stmt = $conn->prepare($check_sql);
+        $check_stmt->bind_param("s", $email);
+        $check_stmt->execute();
+        $check_stmt->store_result();
+        
+        if ($check_stmt->num_rows > 0) {
+            $_SESSION['message'] = 'This email is already subscribed!';
+            $_SESSION['message_type'] = 'error';
+        } else {
+            // Insert new subscriber
+            $insert_sql = "INSERT INTO subscribers (name, email, interest, ip_address, user_agent) VALUES (?, ?, ?, ?, ?)";
+            $insert_stmt = $conn->prepare($insert_sql);
+            $insert_stmt->bind_param("sssss", $name, $email, $interest, $ip_address, $user_agent);
+            
+            if ($insert_stmt->execute()) {
+                $_SESSION['message'] = 'Thank you for subscribing! Check your email for the free programming guide.';
+                $_SESSION['message_type'] = 'success';
+            } else {
+                $_SESSION['message'] = 'Error saving subscription. Please try again.';
+                $_SESSION['message_type'] = 'error';
+            }
+            
+            $insert_stmt->close();
+        }
+        
+        $check_stmt->close();
+    } else {
+        $_SESSION['message'] = implode('<br>', $errors);
+        $_SESSION['message_type'] = 'error';
+    }
+    
+    // Store form data to repopulate on error
+    $_SESSION['form_data'] = [
+        'name' => $name,
+        'email' => $email,
+        'interest' => $interest
+    ];
+    
+    // Redirect back to the form
+    header('Location: ../index.html#contact');
+    exit();
+}
+
+$conn->close();
+?>

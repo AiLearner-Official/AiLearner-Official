@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skiller - Learn Programming & Development</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Skiller</a>
+            
+            <!-- Theme Toggle -->
+            <div class="theme-toggle">
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#projects" class="nav-link">Courses</a></li>
+                    <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-aos="fade-up">Upgrade Your Skills with <span class="highlight">Skiller</span></h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Master in-demand programming languages and technologies with our cinematic learning experience. 
+                    From beginner to advanced, we have the perfect path for your coding journey.
+                </p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#courses" class="btn btn-primary">Start Learning</a>
+                    <a href="#features" class="btn btn-secondary">Explore Courses</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+  <!-- Add this in index.html after the Testimonials section -->
+
+<!-- Projects Showcase Section -->
+<section id="projects" class="projects-showcase">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Student Projects Gallery</h2>
+            <p class="section-subtitle">See what our students have built while learning with Skiller</p>
+        </div>
+        
+        <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="html">HTML/CSS</button>
+            <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            <button class="filter-btn" data-filter="react">React</button>
+            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        </div>
+        
+        <div class="projects-grid" id="projects-container">
+            <!-- Projects will be loaded dynamically by JavaScript -->
+        </div>
+        
+        <div class="project-details-modal" id="project-modal">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-body">
+                    <img id="modal-image" src="" alt="Project Image">
+                    <div class="modal-info">
+                        <h3 id="modal-title"></h3>
+                        <p id="modal-description"></p>
+                        <div class="modal-tech">
+                            <h4>Technologies Used:</h4>
+                            <div id="modal-technologies"></div>
+                        </div>
+                        <div class="modal-links">
+                            <a id="modal-live" href="#" target="_blank" class="btn btn-primary">View Live</a>
+                            <a id="modal-code" href="#" target="_blank" class="btn btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Why Choose Skiller</h2>
+                <p class="section-subtitle">Experience learning like never before with our premium features</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="feature-title">Cinematic Learning</h3>
+                    <p class="feature-desc">High-quality video lessons with professional production value for an immersive experience.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="feature-title">Hands-on Projects</h3>
+                    <p class="feature-desc">Build real-world applications and portfolios with guided project-based learning.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 class="feature-title">Structured Roadmaps</h3>
+                    <p class="feature-desc">Follow expertly designed learning paths from beginner to advanced levels.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Progress Tracking</h3>
+                    <p class="feature-desc">Monitor your learning journey with detailed analytics and achievement badges.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Community Support</h3>
+                    <p class="feature-desc">Join a vibrant community of learners and get help from mentors and peers.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="feature-title">Industry Certificates</h3>
+                    <p class="feature-desc">Earn recognized certificates to showcase your skills to employers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Start your learning journey in just 4 simple steps</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Choose Your Path</h3>
+                        <p class="step-desc">Select from our curated learning paths based on your goals and skill level.</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Watch & Learn</h3>
+                        <p class="step-desc">Engage with cinematic video lessons taught by industry experts.</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Practice & Build</h3>
+                        <p class="step-desc">Apply your knowledge with interactive coding exercises and real-world projects.</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-aos="fade-left" data-aos-delay="400">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Get Certified</h3>
+                        <p class="step-desc">Complete the course and earn a certificate to showcase your new skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">What Our Students Say</h2>
+                <p class="section-subtitle">Join thousands of successful learners who transformed their careers with Skiller</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <!-- Testimonial cards will be generated dynamically -->
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots">
+                        <!-- Dots will be generated by JavaScript -->
+                    </div>
+                    <button class="slider-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Newsletter Section -->
+   <!-- In the Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Start Your Learning Journey</h2>
+            <p class="section-subtitle">Subscribe to our newsletter and get a free beginner's guide to programming</p>
+        </div>
+        
+        <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
+            <form class="contact-form" id="newsletter-form" action="backend/subscribe.php" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                </div>
+                
+                <div class="form-group">
+                    <select name="interest" id="interest" required>
+                        <option value="" disabled selected>Select your interest</option>
+                        <option value="web">Web Development</option>
+                        <option value="python">Python & Data Science</option>
+                        <option value="mobile">Mobile App Development</option>
+                        <option value="java">Java & Backend</option>
+                        <option value="all">All of the above</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary submit-btn">
+                    <span class="btn-text">Get Free Guide</span>
+                    <div class="btn-loader">
+                        <div class="loader"></div>
+                    </div>
+                </button>
+                
+                <p class="form-note">We respect your privacy. Unsubscribe at any time.</p>
+            </form>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="#" class="logo">Skiller</a>
+                    <p class="footer-desc">Master programming languages with our cinematic learning experience. Start your journey today.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">React</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Web Development</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> hello@skiller.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2023 Skiller. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    
+
+    <!-- JavaScript Files -->
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
