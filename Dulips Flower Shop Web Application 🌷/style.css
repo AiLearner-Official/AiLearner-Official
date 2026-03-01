@@ -1,0 +1,342 @@
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+.first-nav{
+    background-color: red;
+    color:white;
+    width:100%;
+    text-align:center;
+    margin-top: 0% auto;
+    margin:0 auto;
+}
+.header{
+    background-color:rgb(249, 203, 210);
+    width:90%;
+    justify-content:space-between;
+    display:flex;
+    text-align:center;
+    overflow:hidden;
+    box-shadow:6px 0 30px -4px rgba(0,0,0,0.5);
+    
+    margin:0 auto;
+    margin-bottom:30px;
+
+}
+.my-form{
+border-radius: 10px;
+box-shadow:7px 0 30px -4px rgba(0,0,0,0.5);
+}
+.image{
+    max-width:60%;
+    height:200px;
+    text-align: center;
+}
+.second-div{
+    background-color:rgb(249, 203, 210);
+    width:90%;
+    justify-content:space-between;
+    display:flex;
+    text-align:center;
+    overflow:hidden;
+    box-shadow:6px 0 30px -4px rgba(0,0,0,0.5);
+    margin:0 auto;
+    gap:20px;
+    flex-wrap: wrap;
+    justify-content:center;
+    
+
+}
+
+.box{
+     background-color: aliceblue;
+     padding:8px;
+     box-shadow: 0 3px 6x rgba(0,0,0,0.4);
+     text-align:center;
+     width:90px;
+     height:190px;
+     margin-bottom: 20px;
+     margin-top:10px;
+     transition:transform 0.3s ease;
+     box-shadow: 4px 0 6px rgba(0,0,0,0.1);
+}
+.box-img  {
+    width:80px; 
+    height:100px;
+    transform:scale(1.1);
+    
+
+}  
+.box:hover{
+    transform:scale(1.1);
+    
+}
+.prize{
+    color:red;
+    
+}
+.desc{
+    font-size: 14px;
+}
+.btn{
+    display:inline-block;
+    padding:4px 10px;
+    background:#ff4d4d;
+    cursor:pointer;
+    font-size:13px;
+    transition:background 0.3s ease;
+    
+}
+.btn:hover{
+    background: #e60000;
+
+}
+.banner{
+    position:relative;
+    background:url("images/download\ \(36\).jpg") no-repeat center center/cover;
+    width:90%;
+    height:250px;
+    margin:30px auto 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:black;
+    text-align:center;
+    overflow:hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.banner::before{
+    content:"";
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background:rgba(255,255,255,0.4);
+}
+.banner h1,
+.banner .btn-offer{
+    position:relative;
+    z-index:1;
+}
+.banner h1{
+    font-size: 40p;
+    font-weight: bold;
+    margin-bottom:15px;
+    text-shadow:2px 2px 6px rgba(0,0,0,0.5);
+
+}
+.btn-offer{
+    padding:10px 20px;
+    background:#ff4d4d;
+    color:white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor:pointer;
+    transition:background 0.3s ease;
+}
+.btn-offer:hover{
+    background:#e60000;
+}
+.img-container{
+    width:90%;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+
+}
+.img-container img{
+    width:100%;
+    height: 100px;
+    object-fit:contain;
+    background:#fff;
+    
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display:block;
+
+}
+.img-box{
+    position:relative;
+
+}
+.badge{
+    position:absolute;
+    top:5px;
+    left:5px;
+    font-weight: bold;
+    padding:3px 4px;
+    border-radius: 10px;
+    background-color: red;
+    color:white;
+}
+.img-box img:hover{
+    filter:brightness(70%);
+    transform:scale(1.1)
+}
+.img-box img{
+    transition:all 0.3s ease;
+}
+.video-section{
+width: 100%;
+margin:20px auto;
+background-image: url("images/My\ Sunday\ Photo\,\ A\ London\ Photo\ Walk\ in\ Belgravia.jpg");
+background-size:cover;
+background-position:center;
+padding:30px;
+display:flex;
+justify-content:center;
+align-items: center;
+
+
+}
+.video-section video{
+    width:60%;
+    height:300px;
+    align-items:center;
+    padding:30px;
+    max-height:fit-content;
+    object-fit: cover;
+
+}
+.product-section{
+    width:60%;
+    margin:20px auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+.product-card{
+    width:90%;
+    display:flex;
+    align-items: center;
+    gap:20px;
+    border-radius:8px;
+    padding:15px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    margin:10px auto;
+    background-color: rgb(215, 176, 181);
+}
+.product-card img{
+    width:120px;
+    height:150;
+
+}
+.product-info{
+    flex:1;
+
+}
+.product-info h3{
+    font-size:16px;
+    margin-bottom:8px;
+}
+.stars{
+    color:gold;
+    margin-bottom:8px;
+}
+.price{
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
+    margin-bottom:10px;
+}
+.Add-to-cart{
+    background: #0fa;
+    color:#fff;
+    padding:8px 15px;
+    border-radius: 15px;
+    cursor:pointer;
+    transition:all 0.3s ease,
+    background 0.2s ease;
+}
+.Add-to-cart hover{
+    background:#0c8;
+
+}
+.Add-to-cart active{
+    transform:scale(1.4);
+    background:#1e7e34;
+}
+.about-container{
+width:80%;
+margin:0 auto;
+display:flex;
+align-items:center;
+justify-content: center;
+gap:20px;
+padding:20px;
+box-sizing:border-box;
+
+}
+
+.about-container img{
+max-width:200px;
+height:auto;
+border-radius: 10px;
+
+}
+.about-text{
+    text-align: center;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.expert-section{
+text-align:center;
+padding:40px 20px;
+
+}
+.expert-section h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+.expert-section p{
+    color:#666;
+}
+.expert{
+    text-align:center;
+    width:180px;
+
+}
+.expert img{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    object-fit:cover;
+    border:3px solid #ddd;
+}
+.expert h3{
+margin-top:10px;
+font-size:18px;
+}
+.expert p {
+color:#777;
+font-size:14px;
+}
+
+.container{
+text-align:center;
+   justify-content:center;
+   align-items:center;
+margin-left:300px;
+width:50%;
+padding:40px 20px;
+border-radius: 20px;
+background: url("images/download\ \(44\).jpg") no-repeat center/cover;
+position:relative;
+box-shadow:0 0 25px rgba(0,0,0,0.4);
+border:6px solid rgb(230, 148, 148);
+margin-top:40px;
+}
+
+
+
+
+
+
+
+
+
+
